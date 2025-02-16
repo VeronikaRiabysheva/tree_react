@@ -1,4 +1,5 @@
 ТЕСТОВОЕ ЗАДАНИЕ
+
 /**
  * Your task is to create a key part of a hierarchical filter plugin. 
  * This component should dynamically transform incoming flat data into a hierarchical tree structure, 
