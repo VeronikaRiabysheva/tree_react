@@ -1,8 +1,35 @@
-# React + Vite
+/**
+ * Your task is to create a key part of a hierarchical filter plugin. 
+ * This component should dynamically transform incoming flat data into a hierarchical tree structure, 
+ * excluding any keys or entries that contain null values. 
+ * The structure should be dynamically determined based on the keys in the data, not hard-coded.
+ * 
+ * Requirements:
+ * - The structure of the hierarchy must be determined dynamically based on the keys present in the incoming data.
+ * - Do not hard-code specific keys (e.g., Category or Подкатегория) in your solution.
+ * - Exclude any entries with null values from the hierarchy.
+ * - Use the treeRoot object as the root node of the hierarchy. All other data should nest within this root node.
+ * - Use the <Tree /> component from the Ant Design (antd) library to display the transformed tree structure.
+ * - Enable interactivity by setting the checkable property.
+ * - The example of incoming data (example of database response) is provided in the data.js file. 
+ *   Use it example to test your component.
+ * 
+ * Implementation:
+ * - Create a project on CodeSandbox, CodePen, or StackBlitz for this task.
+ */
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+const tree = [/* your tree */]; 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+const treeRoot = {
+	checkable: true,
+	disabled: false,
+	disableCheckbox: false,
+	level: null,
+	key: 'tree_root',
+	eventKey: 'tree_root',
+	value: 'All categories',
+	title: 'All categories',
+	selectable: true,
+	checked: false,
+	children: tree,
+};
